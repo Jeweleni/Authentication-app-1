@@ -19,7 +19,7 @@
         <div v-if="errors.password">
           <p class="error">{{ errors.password }}</p>
         </div>
-        <button type="submit">Submit</button>
+        <button class="button" type="submit">Submit</button>
       </form>
       <p class="signup">
         Don't have an account?
@@ -191,80 +191,59 @@ button {
   color: rgb(42, 106, 45);
 }
 
+
+
+@media screen and (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+  
+  }
+  .left {
+    width: 80%;
+  }
+
+  img {
+    display: none;
+  }
+  .login input {
+    width: 100%;
+    justify-content: center;
+  }
+  button {
+    width: 100%;
+    margin: 0;
+  }
+
+  .signup {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .main {
     flex-direction: column;
   
   }
   .left {
-    width: 100%;
+    width: 80%;
   }
 
   img {
     display: none;
   }
   .login input {
-    width: 80%;
-  }
-  button {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .main {
-    flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
-  }
-  .left {
     width: 100%;
-  }
-
-  img {
-    display: none;
-  }
-  /* .login input {
-    width: 80%;
-  } */
-  button {
-    width: 80%;
-    margin-left: 50px;
-  }
-  /* h1 {
-    text-align: center;
-    margin-top: 50px;
-    color: rgb(42, 106, 45);
-  }
-
-  h3 {
-    text-align: center;
-    margin-top: 30px;
-    color: rgb(12, 24, 13);
-  } */
-
-  /* label {
-    font-size: 20px;
-    margin-left: 10%;
-  } */
-
-
-  .login input {
-    align-items: center;
     justify-content: center;
-    margin: auto;
-
-    padding: 1rem;
-    border: 1px solid black;
-    /* margin-right: auto;
-  margin-left: auto; */
-    display: flex;
-    margin-bottom: 30px;
-    border-radius: 12px;
   }
-  /* form {
-  display: flex;
-  flex-direction: column;
-} */
+  button {
+    width: 100%;
+    margin: 0;
+  }
+
+  .signup {
+    font-size: 19px;
+    margin-top: 20px;
+  }
 }
 </style>

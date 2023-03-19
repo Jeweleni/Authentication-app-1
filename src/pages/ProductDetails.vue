@@ -167,6 +167,7 @@ created() {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 100vh;
   background-color: #f5f5f5;
 }
 .left {
@@ -174,6 +175,7 @@ created() {
   display: flex;
   justify-content: center;
   align-items: center;
+margin-bottom: 100px;
 }
 .right {
   width: 50%;
@@ -208,10 +210,11 @@ font-size: 15px;
   color: rgb(0, 0, 0);
 }
 .goBack{
-  width: 100%;
-  background-color: #000;
+  width: 50%;
+  background-color:  rgb(42, 106, 45);
   color: #fff;
   cursor: pointer;
+  text-align: center;
 }
 
 
@@ -219,12 +222,12 @@ font-size: 15px;
 @media screen and (max-width: 1024px) {
   .main {
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
   }
 
   img {
     width: 100%;
-    height: 100%;
+    height: 60%;
     margin-top: 20px;
   }
   h1{

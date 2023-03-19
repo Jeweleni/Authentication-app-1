@@ -97,7 +97,6 @@ export default {
 </script>
 
 <style scoped>
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 * {
@@ -158,7 +157,7 @@ h3 {
   margin-left: 10%;
 } */
 
-.signup{
+.signup {
   display: flex;
   flex-direction: column;
   /* margin-left: 10%;
@@ -196,8 +195,8 @@ button {
   font-family: cursive;
   font-size: 20px;
   margin-top: 0%;
-  /* margin-left: auto;
-  margin-right: auto; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .login a {
@@ -205,57 +204,81 @@ button {
   color: rgb(42, 106, 45);
 }
 
-@media screen and (max-width: 768px) {
-  .main {
+
+@media screen and (max-width: 1024px) {
+   .main {
     flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
   }
   .left {
-    width: 100%;
+    width: 80%;
   }
 
   img {
     display: none;
   }
   .signup input {
-    width: 80%;
+    width: 100%;
+    justify-content: center;
+   
   }
   button {
-    width: 80%;
+    width: 100%;
+    margin: 0;
+ 
+
+    /* margin-bottom: 30px;
+    border-radius: 12px;
+    margin-left: 50px;
+    */
+
+    /* padding: 1px; */
+    border: 1px solid rgb(0, 0, 0);
+  }
+
+  .login {
+    margin-top: 20px;
+    font-size: 27px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .main {
     flex-direction: column;
     margin: 0 auto;
     align-items: center;
   }
   .left {
-    width: 100%;
+    width: 80%;
   }
 
   img {
     display: none;
   }
   .signup input {
-    /* width: 80%; */
-
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-
-  padding: 1rem;
-  border: 1px solid black;
-  /* margin-right: auto;
-  margin-left: auto; */
-  display: flex;
-  margin-bottom: 30px;
-  border-radius: 12px;
-
+    width: 100%;
+    justify-content: center;
+   
   }
   button {
-    width: 80%;
+    width: 100%;
+    margin: 0;
+ 
+
+    /* margin-bottom: 30px;
+    border-radius: 12px;
     margin-left: 50px;
+    */
+
+    /* padding: 1px; */
+    border: 1px solid rgb(0, 0, 0);
+  }
+
+  .login {
+    margin-top: 20px;
+    font-size: 17px;
   }
 }
+
 </style>

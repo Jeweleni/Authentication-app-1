@@ -4,7 +4,7 @@
 
     <ul class="navlinks">
       <router-link to="/">Home</router-link>
-      <li class="navlinks" v-if="isLoggedIn !== true">
+      <li class="navlinks" v-if="isLoggedIn !== false">
         <router-link to="/login">Login</router-link>
       </li>
       
@@ -14,7 +14,7 @@
       <li class="navlinks" v-if="isLoggedIn === true">
         <router-link to="/products">Products</router-link>
       </li>
-       <li v-if="isLoggedIn === true" @click="onLogout()" class="logout">
+       <li class="logout" v-if="isLoggedIn == true" @click="onLogout()" >
         <router-link to="/">Log Out</router-link>
       </li>
      
