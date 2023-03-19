@@ -148,14 +148,15 @@ form {
 
 h3 {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   color: rgb(12, 24, 13);
 }
 
-label {
+/* label {
   font-size: 20px;
   margin-left: 10%;
-}
+} */
 
 .signup{
   display: flex;
@@ -166,9 +167,9 @@ label {
 }
 
 .signup input {
-  align-items: center;
-  justify-content: center;
-  margin: auto;
+  /* align-items: center;
+  justify-content: center; */
+  /* margin: auto; */
 
   padding: 1rem;
   border: 1px solid black;
@@ -180,11 +181,11 @@ label {
 }
 
 button {
-  width: 300px;
+  width: 500px;
   height: 40px;
   /* padding-left: 20px; */
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 30px;
   margin-bottom: 30px;
   border: 1px solid black;
   cursor: pointer;
@@ -237,10 +238,24 @@ button {
     display: none;
   }
   .signup input {
-    width: 80%;
+    /* width: 80%; */
+
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+
+  padding: 1rem;
+  border: 1px solid black;
+  /* margin-right: auto;
+  margin-left: auto; */
+  display: flex;
+  margin-bottom: 30px;
+  border-radius: 12px;
+
   }
   button {
     width: 80%;
+    margin-left: 50px;
   }
 }
 </style>

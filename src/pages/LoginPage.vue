@@ -113,13 +113,11 @@ export default {
   display: flex;
   flex-direction: column;
   margin: auto;
-
 }
-form{
+/* form {
   display: flex;
   flex-direction: column;
-
-}
+} */
 .right {
   width: 50%;
 }
@@ -138,29 +136,26 @@ h1 {
 
 h3 {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   color: rgb(12, 24, 13);
 }
 
-label{
-
+/* label {
   font-size: 20px;
   margin-left: 10%;
-
-}
-.login {
+} */
+.login{
   display: flex;
-  /* margin: auto; */
   flex-direction: column;
-  /* margin-top: 30px;
-  margin-bottom: 30px; */
-  /* border: 1px solid rgb(166, 20, 20); */
+  /* margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 30px; */
 }
-
 .login input {
-  align-items: center;
+  /* align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: auto; */
 
   padding: 1rem;
   border: 1px solid black;
@@ -171,12 +166,13 @@ label{
   border-radius: 12px;
 }
 button {
-  width: 300px;
+  width: 500px;
   height: 40px;
-  /* padding: 5px; */
+  /* padding: 15px; */
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 50px;
   margin-bottom: 30px;
+
   border: 1px solid black;
   cursor: pointer;
   border-radius: 12px;
@@ -188,17 +184,17 @@ button {
   margin-top: 0%;
   margin-left: auto;
   margin-right: auto;
+
 }
 .signup a {
   text-decoration: none;
   color: rgb(42, 106, 45);
 }
 
-
-
 @media screen and (max-width: 768px) {
   .main {
     flex-direction: column;
+  
   }
   .left {
     width: 100%;
@@ -228,11 +224,47 @@ button {
   img {
     display: none;
   }
-  .login input {
+  /* .login input {
     width: 80%;
-  }
+  } */
   button {
     width: 80%;
+    margin-left: 50px;
   }
+  /* h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(42, 106, 45);
+  }
+
+  h3 {
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(12, 24, 13);
+  } */
+
+  /* label {
+    font-size: 20px;
+    margin-left: 10%;
+  } */
+
+
+  .login input {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    padding: 1rem;
+    border: 1px solid black;
+    /* margin-right: auto;
+  margin-left: auto; */
+    display: flex;
+    margin-bottom: 30px;
+    border-radius: 12px;
+  }
+  /* form {
+  display: flex;
+  flex-direction: column;
+} */
 }
 </style>
