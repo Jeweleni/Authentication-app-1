@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="footer">All rights reserved. © EMJCREATES 2023</p>
+    <p class="footer">All rights reserved. © EMJCREATES_ 2023</p>
   </div>
 </template>
 
