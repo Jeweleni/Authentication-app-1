@@ -170,7 +170,7 @@ button {
   height: 40px;
   /* padding: 15px; */
   margin-right: auto;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   margin-bottom: 30px;
 
   border: 1px solid black;

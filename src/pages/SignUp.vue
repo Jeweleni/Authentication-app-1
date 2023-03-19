@@ -185,7 +185,7 @@ button {
   height: 40px;
   /* padding-left: 20px; */
   margin-right: auto;
-  margin-left: 30px;
+  /* margin-left: 10px; */
   margin-bottom: 30px;
   border: 1px solid black;
   cursor: pointer;
