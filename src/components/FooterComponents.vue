@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="footer">All rights reserved. © @EMJCREATES 2023</p>
+    <p class="footer">All rights reserved. © EMJCREATES 2023</p>
   </div>
 </template>
 
@@ -17,15 +17,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: right;
   margin: 0%;
-  font-size: 10px;
-  color: #000;
-  padding: 170px;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+
 }
 
 @media screen and (max-width: 768px) {
     .footer{
         font-size: 10px;
-        padding: 90px;
+        padding: 1rem;
     }
 }
 </style>

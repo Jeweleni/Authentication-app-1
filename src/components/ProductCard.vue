@@ -1,10 +1,11 @@
 <template>
   <div class="main">
     <div class="cards" v-for="product in products" :key="product.id">
+       <div>
       <img :src="product.images[0]" alt="" />
-      <div>
-        <div class="tittle">
-          <h1>
+   </div>
+        <div>
+          <h1 class="tittle" >
             {{ product.title }}
           </h1>
           <font-awesome-icon icon="fa-solid fa-bookmark" />
@@ -23,18 +24,18 @@
           </p>
         </div>
         <!-- price and Category -->
-      </div>
-      <div class="price">
-        <p>$ {{ product.price }}</p>
+     
+      <div >
+        <p class="price">$ {{ product.price }}</p>
         <p>{{ product.category }}</p>
       </div>
-      <div class="more">
-        <button>
+     <div class="more">
+        <button class="more">
           <router-link :to="{ name: 'product', params: { id: product.id } }">
             View Product
           </router-link>
         </button>
-      </div>
+     </div>
     </div>
   </div>
 </template>
@@ -72,40 +73,45 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+*, *::before, *::after {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
 }
 .cards {
-  width: 300px;
-  height: 400px;
+  max-width: 450px;
   margin: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(190, 188, 188);
   border-radius: 5px;
   box-shadow: 0 0 10px #ccc;
-  display: flex;
+  display: grid;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 1rem;
 }
-.cards img {
+img {
   width: 100%;
   height: 170px;
   object-fit: cover;
 }
 .tittle {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-.tittle h1 {
+ h1 {
   font-size: 20px;
   font-weight: 500;
   color: rgb(0, 0, 0);
-  font-weight: bolder;
+
 }
 .description {
   font-size: 15px;
@@ -113,7 +119,6 @@ export default {
   color: rgb(0, 0, 0);
 }
 .rating {
-  display: flex;
   align-items: center;
   font-size: 15px;
   font-weight: 300;
@@ -125,7 +130,6 @@ export default {
   color: rgb(152, 41, 41);
 }
 .price {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -137,7 +141,7 @@ export default {
 }
 .more {
   width: 100%;
-  display: flex;
+
   justify-content: center;
 }
 .more button {
@@ -152,5 +156,25 @@ export default {
 .more button a {
   text-decoration: none;
   color: white;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+  }
+  
 }
 </style>

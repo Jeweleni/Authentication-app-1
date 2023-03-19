@@ -25,15 +25,13 @@
         Don't have an account?
         <router-link to="/signup"> SignUp here</router-link>
       </p>
-          <footer-components />
     </div>
 
     <div class="right">
       <img src="../assets/login.jpeg" />
     </div>
-
   </div>
-
+  <footer-components />
 </template>
 
 <script>
@@ -66,11 +64,10 @@ export default {
         return false;
       }
 
-       this.$store.dispatch("auth/login", {
-          email: this.email,
-          password: this.password,
-        });
-
+      this.$store.dispatch("auth/login", {
+        email: this.email,
+        password: this.password,
+      });
 
       // if (
       //   this.email === this.user.email &&
@@ -92,23 +89,37 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap");
+
 * {
-  font-family: "Roboto", sans-serif;
-  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .main {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-top: 0%;
   gap: 10px;
+  height: 100vh;
 }
 
 .left {
   width: 50%;
-  margin-left: 10%;
-}
+  max-width: 500px;
+  /* border: 1px solid rgb(125, 0, 0); */
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 
+}
+form{
+  display: flex;
+  flex-direction: column;
+
+}
 .right {
   width: 50%;
 }
@@ -123,20 +134,35 @@ h1 {
   text-align: center;
   margin-top: 50px;
   color: rgb(42, 106, 45);
-  font-family: "Roboto", sans-serif;
 }
 
 h3 {
-  text-align: left;
+  text-align: center;
   margin-top: 30px;
   color: rgb(12, 24, 13);
-  font-family: "Roboto", sans-serif;
+}
+
+label{
+
+  font-size: 20px;
+  margin-left: 10%;
+
+}
+.login {
+  display: flex;
+  /* margin: auto; */
+  flex-direction: column;
+  /* margin-top: 30px;
+  margin-bottom: 30px; */
+  /* border: 1px solid rgb(166, 20, 20); */
 }
 
 .login input {
-  width: 300px;
-  height: 40px;
-  /* padding: 5px; */
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+
+  padding: 1rem;
   border: 1px solid black;
   /* margin-right: auto;
   margin-left: auto; */
@@ -168,9 +194,32 @@ button {
   color: rgb(42, 106, 45);
 }
 
+
+
 @media screen and (max-width: 768px) {
   .main {
     flex-direction: column;
+  }
+  .left {
+    width: 100%;
+  }
+
+  img {
+    display: none;
+  }
+  .login input {
+    width: 80%;
+  }
+  button {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
   }
   .left {
     width: 100%;

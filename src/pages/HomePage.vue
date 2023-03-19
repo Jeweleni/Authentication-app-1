@@ -9,9 +9,11 @@
       <button>
         <router-link to="/login" class="button"> View Products </router-link>
       </button>
+     
     </div>
-<footer-components />
+
   </div>
+   <footer-components />
 </template>
 
 <script>
@@ -29,7 +31,11 @@ export default {
 </script>
 
 <style scoped>
+
+  @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+
 .home {
+  font-family: "Poppins", sans-serif;
   margin-top: 0%;
   background: url("../assets/homebackground.jpg");
   background-size: cover;

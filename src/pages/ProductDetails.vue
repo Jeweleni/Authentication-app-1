@@ -47,27 +47,29 @@
       <img :src="img" />
     </div>
     <div class="right">
-      <div class="brand">
+  
+       <h2>{{ category }}</h2>
         <h1>{{ brand }}</h1>
-        <h2>{{ category }}</h2>
-      </div>
-      <div class="title">
+       
+
         <h1>{{ title }}</h1>
+        
         <h2>{{ price }}</h2>
-      </div>
-      <div class="rating">
+  
+
         <h1>{{ rating }}</h1>
-      </div>
-      <div class="description">
+
+     
         <h1>{{ description }}</h1>
-      </div>
+  
       <div class="goBack"  @click="goBack">
    Go Back
       </div>
   
     </div>
-    <footer-components />
+  
   </div>
+    <footer-components />
 </template>
 
 <script>
@@ -151,59 +153,49 @@ created() {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+*, *::before, *::after {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100vh;
   background-color: #f5f5f5;
 }
 .left {
   width: 50%;
-  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .right {
   width: 50%;
-  height: 70%;
+  font-size: 14px;
+  line-height: 180%;
   display: flex;
+  font-weight: 300;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between; */
+  /* border: 1px solid rgb(241, 3, 3); */
+  gap: 16px;
 }
 h1 {
-  width: 100%;
-  height: 10%;
-  display: flex;
+
   font-size: 15;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
 }
 h2{
-  width: 100%;
-  height: 10%;
-  display: flex;
   font-size: 15;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-.title {
-  width: 100%;
-  height: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 .rating {
-   display: flex;
-  align-items: center;
   font-size: 15px;
   font-weight: 300;
   color: #666;
@@ -217,14 +209,46 @@ font-size: 15px;
 }
 .goBack{
   width: 100%;
-  height: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #000;
   color: #fff;
   cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+  }
+  h1{
+    font-size: 20px;
+    margin: 0%;
+  }
+}
+
+@media  screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  .right{
+    width: 100%;
+    padding: 20px;
+    font-size: 12px;
+  }
 }
 
 </style>

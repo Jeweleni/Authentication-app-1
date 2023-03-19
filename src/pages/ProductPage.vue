@@ -7,7 +7,7 @@
       <!-- <font-awesome-icon icon="fa-solid fa-user-secret" width="30" /> -->
       <div>
         <h1>
-          WELCOME
+          PRODUCTS
           <!-- <span class="user"> {{ user.name }}</span> -->
         </h1>
         <h2 class="text">These are your available products</h2>
@@ -82,22 +82,64 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+*, *::before, *::after {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .main {
-  background: url("../assets/products.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
   width: 100%;
-  display: flex;
-
+  display: grid;
   flex-direction: column;
 }
 h1{
   font-size: 50px;
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   margin-top: 20px;
+  font-weight: 500;
 
+}
+
+h2{
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+h1{
+  font-size: 50px;
+  text-align: center;
+  font-weight: 500;
+  
+}
+h2{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 300;
+
+}
+  
+}
+
+@media screen and (max-width: 768px) {
+h1{
+  font-size: 40px;
+  text-align: center;
+  font-weight: 500;
+}
+h2{
+  font-size: 20px;
+  text-align: center;
+  font-weight: 300;
+
+}
+  
 }
 </style>

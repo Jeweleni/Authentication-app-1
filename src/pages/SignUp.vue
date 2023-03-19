@@ -33,13 +33,13 @@
         Already have an account?
         <router-link to="/login">Login here</router-link>
       </p>
-      <footer-components />
     </div>
 
     <div class="right">
       <img src="../assets/login.jpeg" />
     </div>
   </div>
+  <footer-components />
 </template>
 
 <script>
@@ -97,9 +97,14 @@ export default {
 </script>
 
 <style scoped>
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
 * {
-  font-family: "Roboto", sans-serif;
-  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .main {
@@ -108,11 +113,16 @@ export default {
   justify-content: space-between;
   margin-top: 0%;
   gap: 10px;
+  height: 100vh;
 }
 
 .left {
   width: 50%;
-  margin-left: 10%;
+  max-width: 500px;
+  /* border: 1px solid rgb(125, 0, 0); */
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
 .right {
@@ -121,32 +131,51 @@ export default {
 
 img {
   width: 100%;
-  height: 80%;
+  height: 100vh;
   border-radius: 6rem 0 0 2rem;
 }
 
 h1 {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 50px;
   color: rgb(42, 106, 45);
-  font-family: "Roboto", sans-serif;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
 h3 {
-  text-align: left;
-  margin-top: 20px;
+  text-align: center;
+  margin-top: 30px;
   color: rgb(12, 24, 13);
-  font-family: "Roboto", sans-serif;
+}
+
+label {
+  font-size: 20px;
+  margin-left: 10%;
+}
+
+.signup{
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 30px; */
 }
 
 .signup input {
-  width: 300px;
-  height: 40px;
-  /* padding-left: 20px; */
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+
+  padding: 1rem;
   border: 1px solid black;
-  /* margin-right: auto; */
+  /* margin-right: auto;
+  margin-left: auto; */
   display: flex;
-  /* margin-left: auto; */
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   border-radius: 12px;
 }
 
@@ -166,8 +195,8 @@ button {
   font-family: cursive;
   font-size: 20px;
   margin-top: 0%;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 .login a {
@@ -194,9 +223,11 @@ button {
   }
 }
 
-@media screen and (max-width: 1024) {
+@media screen and (max-width: 1024px) {
   .main {
     flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
   }
   .left {
     width: 100%;
