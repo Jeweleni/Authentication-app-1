@@ -84,6 +84,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
+
 }
 .cards {
   max-width: 450px;
@@ -174,6 +175,7 @@ img {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 2.5rem;
+
   }
   
 }

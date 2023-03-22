@@ -14,10 +14,10 @@
       <li class="navlinks" v-if="isLoggedIn === true">
         <router-link to="/products">Products</router-link>
       </li>
-       <li class="logout" v-if="isLoggedIn == true" @click="onLogout()" >
+       <!-- <li class="logout" v-if= "logge" >
         <router-link to="/">Log Out</router-link>
       </li>
-     
+      -->
       
     </ul>
   </nav>

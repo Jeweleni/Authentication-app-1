@@ -46,7 +46,7 @@ export default {
     logout({ commit }) {
       commit("setIsAuthenticated", false);
       router.push("/login");
-      toast.success("Logout Successful");
+      toast.success("Logout Successful"); 
     },
   },
   getters: {
